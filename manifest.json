@@ -1,0 +1,11 @@
+{
+    "manifest_version":2,
+    "version":"1.0",
+    "name":"Test",
+    "content_scripts":[
+      {
+       "matches":["https://mylms.eduvos.com/*"],
+       "js":["main.js"]
+      }
+    ]
+  }
