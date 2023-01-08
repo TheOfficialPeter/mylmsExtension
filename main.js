@@ -2,7 +2,56 @@ window.onload = function()
 {
     try
     {
-        document.getElementById('page').style.background = "linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://images3.alphacoders.com/114/1149399.png)";
+        document.body.style.margin = "0";
+        document.body.style.padding = "0";
+        document.getElementsByClassName('loginform')[0].remove();
+        document.getElementsByClassName('py-3')[0].remove();
+
+        var eduvos = document.createElement("h1");
+        eduvos.id = "eduvosTitle";
+        eduvos.style = "font-size: 200px; font-family: Sans-serif; text-align: center; font-weight: 100; letter-spacing: .3em; position: absolute; top: 20%; left: 0px; right: 0px; color: white";
+        eduvos.innerText = "Eduvos";
+
+        var loginBtn = document.createElement("div");
+        loginBtn.id = "loginBtn";
+        loginBtn.style = "cursor: pointer; z-index: 999; position: absolute; bottom: 20%; width: 250px; height: 50px; left: calc(50% - 250px/2); outline: 2px solid white; color: white;";
+
+        var loginBtnLabel = document.createElement("div");
+        loginBtnLabel.id = "loginBtnLabel";
+        loginBtnLabel.innerText = "LOGIN"
+        loginBtnLabel.style = "z-index: 1000; letter-spacing: 1em; color: white; font-size: 20px; font-family: monospace; text-align: center; padding-top: 7px;";
+
+        loginBtn.onmouseenter = function()
+        {
+            loginBtn.style.width = "300px";
+            loginBtn.style.left = "calc(50% - 300px/2)";
+            loginBtn.style.transition = "all .2s";
+        }
+
+        loginBtn.onclick = function()
+        {
+            location.href = "https://mylms.eduvos.com/auth/oidc";
+        }
+
+        loginBtn.onmouseleave = function()
+        {
+            loginBtn.style.width = "275px";
+            loginBtn.style.left = "calc(50% - 275px/2)";
+            loginBtn.style.transition = "all .2s";
+        }
+
+        loginBtn.appendChild(loginBtnLabel);
+        document.body.appendChild(loginBtn);
+        document.body.appendChild(eduvos);
+    }
+    catch
+    {
+
+    }
+
+    try
+    {
+        document.getElementById('page').style.background = "linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://images.hdqwalls.com/wallpapers/horizon-zero-dawn-game-art-4k-3h.jpg)";
         document.getElementById('page').style.backgroundSize = "cover";
     }
     catch 
@@ -12,7 +61,7 @@ window.onload = function()
 
     try {
         document.body.style.overflowX = "hidden";
-        document.getElementById('loginbtn').style.backgroundColor = "#369536";
+        document.getElementById('loginbtn').style.backgroundColor = "#451115";
         document.getElementById('loginbtn').style.border = "none";
         document.getElementById('page-login-index').style.background = "url(https://media.tenor.com/2kv4Vx1XxEQAAAAC/happy-birthday.gif)";
         document.getElementById('page-login-index').style.backgroundSize = "cover";
