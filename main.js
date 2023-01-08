@@ -2,6 +2,15 @@ window.onload = function()
 {
     try
     {
+        var blank = document.createElement("div");
+        blank.id = "blank";
+        blank.style = "transition: all 5s; background-color: black; position: absolute; left: 0; right: 0; top: 0; bottom: 0;";
+        document.body.appendChild(blank);
+
+        setTimeout(function(){
+            blank.style.opacity = "0";
+        },10)
+
         document.body.style.margin = "0";
         document.body.style.padding = "0";
         document.getElementsByClassName('loginform')[0].remove();
@@ -9,8 +18,8 @@ window.onload = function()
 
         var eduvos = document.createElement("h1");
         eduvos.id = "eduvosTitle";
-        eduvos.style = "font-size: 200px; font-family: Sans-serif; text-align: center; font-weight: 100; letter-spacing: .3em; position: absolute; top: 20%; left: 0px; right: 0px; color: white";
-        eduvos.innerText = "Eduvos";
+        eduvos.style = "margin-left: 20px; font-size: 200px; font-family: Sans-serif; text-align: center; font-weight: 100; letter-spacing: .3em; position: absolute; top: 20%; left: 0px; right: 0px; color: white";
+        eduvos.innerText = " Eduvos";
 
         var loginBtn = document.createElement("div");
         loginBtn.id = "loginBtn";
@@ -19,11 +28,12 @@ window.onload = function()
         var loginBtnLabel = document.createElement("div");
         loginBtnLabel.id = "loginBtnLabel";
         loginBtnLabel.innerText = "LOGIN"
-        loginBtnLabel.style = "z-index: 1000; letter-spacing: 1em; color: white; font-size: 20px; font-family: monospace; text-align: center; padding-top: 7px;";
+        loginBtnLabel.style = "margin-left: 10px; z-index: 1000; letter-spacing: 1em; color: white; font-size: 20px; font-family: monospace; text-align: center; padding-top: 7px;";
 
         loginBtn.onmouseenter = function()
         {
             loginBtn.style.width = "300px";
+            loginBtn.style.outline = "3px solid white";
             loginBtn.style.left = "calc(50% - 300px/2)";
             loginBtn.style.transition = "all .2s";
         }
@@ -36,6 +46,7 @@ window.onload = function()
         loginBtn.onmouseleave = function()
         {
             loginBtn.style.width = "275px";
+            loginBtn.style.outline = "2px solid white";
             loginBtn.style.left = "calc(50% - 275px/2)";
             loginBtn.style.transition = "all .2s";
         }
