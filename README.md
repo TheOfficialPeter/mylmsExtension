@@ -5,3 +5,7 @@ Create your own custom theme for Eduvos MyLMS (university website). ~30% complet
 1. Go to you browsers local extensions page.
 2. Click on the `Load Unpacked` button and select the folder you downloaded
 3. Open mylms.eduvos.com
+
+## Update
+
+The university's site has changed so ill update this too
